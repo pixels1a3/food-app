@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import SearchBar from './components/SearchBar';
 import MealList from './components/MealList';
 import MealDetails from './components/MealDetails';
+import './styles/App.css';
+import './styles/SearchBar.css';
+import './styles/MealList.css';
+import './styles/MealDetails.css';
 
 function App() {
   const [meals, setMeals] = useState([]);
@@ -21,16 +25,17 @@ function App() {
     }
   };
 
-  /* user's selected meal */
   const handleSelectMeal = (meal) => {
     setSelectedMeal(meal);
   };
 
   return (
-    <div>
+    <div className="app-container">
       <h1>Food Finder</h1>
-      <SearchBar onSearch={handleSearch} />
-      <div style={{ display: 'flex' }}>
+      <div className="search-container">
+        <SearchBar onSearch={handleSearch} />
+      </div>
+      <div className="main-layout">
         <MealList meals={meals} onSelectMeal={handleSelectMeal} />
         <MealDetails meal={selectedMeal} />
       </div>

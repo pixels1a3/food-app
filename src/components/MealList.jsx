@@ -1,15 +1,17 @@
 import React from 'react';
+import '../styles/MealList.css';
 
 const MealList = ({ meals, onSelectMeal }) => {
   if (!meals || meals.length === 0) {
-    return <p>No meals found.</p>;
+    return <p style={{ padding: '20px' }}>No meals found.</p>;
   }
 
   return (
-    <div style={{ flex: 1, marginRight: '20px' }}>
+    <div className="meal-list">
       {meals.map((meal) => (
         <div
           key={meal.idMeal}
+          className="meal-item"
           onClick={() => onSelectMeal(meal)}
         >
           <img

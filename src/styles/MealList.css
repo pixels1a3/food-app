@@ -1,0 +1,39 @@
+.meal-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  max-width: 100%;
+}
+
+.meal-item {
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 8px;
+  background-color: #f9f9f9;
+  transition: background-color 0.2s, transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: none;
+  width: 100%;
+}
+
+.meal-item img {
+  width: 100%;
+  max-width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.meal-item span {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.meal-item:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}

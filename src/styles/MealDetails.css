@@ -1,0 +1,51 @@
+.meal-details {
+  position: fixed;
+  right: 20px;
+  top: var(--search-bar-height, 80px);
+  width: 600px;
+  height: 80vh;
+  max-width: 100%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  z-index: 500;
+}
+
+.meal-details h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.meal-details img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ingredients {
+  margin-bottom: 30px;
+  min-height: 200px;
+}
+
+.ingredients ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.instructions {
+  white-space: pre-wrap;
+  line-height: 1.5;
+  color: #555;
+  min-height: 100px;
+}

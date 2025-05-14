@@ -1,9 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
+import '../styles/SearchBar.css';
 
 const SearchBar = ({ onSearch }) => {
     const [searchTerm, setSearchTerm] = useState('');
     const inputRef = useRef(null);
 
+    /* automatic focus */
     useEffect(() => {
         if (inputRef.current) {
             inputRef.current.focus();
@@ -21,14 +23,14 @@ const SearchBar = ({ onSearch }) => {
     };
 
     return (
-        <form onSubmit={handleSubmit} style={{ marginBottom: '20px'}}>
+        <form onSubmit={handleSubmit} className="search-form">
             <input
                 ref={inputRef}
                 type="text"
                 placeholder='Search for food...'
                 value={searchTerm}
                 onChange={handleChange}
-                style={{ padding: '8px', width: '300px' }}
+                className="search-input"
             />
         </form>
     );
