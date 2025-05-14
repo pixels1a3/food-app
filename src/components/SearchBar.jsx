@@ -11,12 +11,13 @@ const SearchBar = ({ onSearch }) => {
     }, []);
 
     const handleChange = (e) => {
-        setSearchTerm(e.target.value);
+        const value = e.target.value;
+        setSearchTerm(value);
+        onSearch(value); // call onSearch on every change
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        onSearch(searchTerm);
     };
 
     return (
@@ -29,7 +30,6 @@ const SearchBar = ({ onSearch }) => {
                 onChange={handleChange}
                 style={{ padding: '8px', width: '300px' }}
             />
-            <button type='submit' style={{ padding: '8px 12px', marginLeft: '8px'}}>Search</button>
         </form>
     );
 };
