@@ -21,6 +21,7 @@ function App() {
     }
   };
 
+  /* user's selected meal */
   const handleSelectMeal = (meal) => {
     setSelectedMeal(meal);
   };

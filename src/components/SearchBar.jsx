@@ -1,7 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 const SearchBar = ({ onSearch }) => {
     const [searchTerm, setSearchTerm] = useState('');
+    const inputRef = useRef(null);
+
+    useEffect(() => {
+        if (inputRef.current) {
+            inputRef.current.focus();
+        }
+    }, []);
 
     const handleChange = (e) => {
         setSearchTerm(e.target.value);
@@ -15,6 +22,7 @@ const SearchBar = ({ onSearch }) => {
     return (
         <form onSubmit={handleSubmit} style={{ marginBottom: '20px'}}>
             <input
+                ref={inputRef}
                 type="text"
                 placeholder='Search for food...'
                 value={searchTerm}
