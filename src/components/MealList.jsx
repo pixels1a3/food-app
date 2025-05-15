@@ -1,10 +1,18 @@
 import React from 'react';
 import '../styles/MealList.css';
 
-const MealList = ({ meals, onSelectMeal }) => {
-  if (!meals || meals.length === 0) {
-    return <p style={{ padding: '20px' }}>No meals found.</p>;
-  }
+const MealList = ({ meals, onSelectMeal, hasSearched }) => {
+    if (meals.length === 0 && hasSearched) {
+      return (
+        <div className="no-meals">
+          <p>No meals found.</p>
+        </div>
+      );
+    }
+  
+    if (meals.length === 0 && !hasSearched) {
+      return null;
+    }
 
   return (
     <div 

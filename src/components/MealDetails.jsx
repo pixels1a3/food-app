@@ -1,18 +1,18 @@
 import React from 'react';
 import '../styles/MealDetails.css';
 
-const MealDetails = ({ meal }) => {
-  if (!meal) {
-    return <p style={{ padding: '20px' }}>Select a meal to see details.</p>;
-  }
+const MealDetails = ({ meal, meals }) => { 
+    if (!meal) {
+      return null;
+    }
 
   // extract ingredients etc
   const ingredients = [];
   for (let i = 1; i <= 20; i++) {
     const ingredient = meal[`strIngredient${i}`];
     const measure = meal[`strMeasure${i}`];
-    if (ingredient && ingredient.trim() !== '') {   // filter empty results
-      ingredients.push(`${measure} ${ingredient}`.trim());  // e.g. 1 cup + sugar = 1 cup sugar 
+    if (ingredient && ingredient.trim() !== '') {   // if it's not empty
+      ingredients.push(`${measure} ${ingredient}`.trim());  // e.g. 1 cup + sugar = 1 cup sugar
     }
   }
 

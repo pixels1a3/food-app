@@ -27,7 +27,7 @@ const SearchBar = ({ onSearch }) => {
             <input
                 ref={inputRef}
                 type="text"
-                placeholder='Search for food...'
+                placeholder='Search for a meal'
                 value={searchTerm}
                 onChange={handleChange}
                 className="search-input"

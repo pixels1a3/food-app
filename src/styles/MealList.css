@@ -46,6 +46,27 @@
   color: #333;
 }
 
+.no-meals {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 200px;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  z-index: 2000;
+}
+
+.no-meals p {
+  color: red;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
 @media (max-width: 768px) {
   .meal-list {
     grid-template-columns: repeat(2, 1fr);

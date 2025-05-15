@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  background-color: #fafafa;
+  background-color: #ffffff;
   color: #333;
   min-height: 100vh;
   display: flex;
@@ -14,7 +14,6 @@ h1 {
   padding: 1.5rem 0;
   font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', sans-serif;
   color: #2c3e50;
-  background-color: #fafafa;
   font-size: clamp(1.8rem, 5vw, 2.2rem);
 }
 
@@ -27,6 +26,10 @@ h1 {
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
+}
+
+.app-container h1 {
+  color: rgb(223, 123, 42);
 }
 
 .search-container {
@@ -52,6 +55,28 @@ h1 {
   max-width: 700px;
   min-width: 300px;
   box-sizing: border-box;
+  width: 100%;
+}
+
+.no-meals {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 200px;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  z-index: 2000;
+}
+
+.no-meals p {
+  color: red;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
 }
 
 @media (max-width: 768px) {
