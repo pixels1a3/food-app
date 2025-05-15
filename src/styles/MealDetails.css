@@ -1,9 +1,8 @@
 .meal-details {
   position: fixed;
-  right: 20px;
-  top: calc(var(--header-height, 80px) + var(--search-bar-height, 60px));
-  width: 600px;
-  height: 80vh;
+  right: 70px;
+  width: 500px;
+  height: 75vh;
   max-width: 100%;
   padding: 20px;
   border: 1px solid #ccc;
@@ -48,4 +47,19 @@
   line-height: 1.5;
   color: #555;
   min-height: 100px;
+}
+
+
+@media (max-width: 1096px) {
+  .meal-details {
+    position: static;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 20px auto;
+    margin-top: 20px;
+  }
+  .meal-details img {
+    max-width: 400px;
+  }
 }

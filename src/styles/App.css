@@ -3,20 +3,16 @@ body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   background-color: #fafafa;
   color: #333;
-  padding-top: var(--header-height, 80px);
+  padding-top: calc(var(--search-bar-height, 10px));
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 h1 {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
   width: 100%;
   text-align: center;
-  margin: 0;
+  margin: 0 auto;
   padding: 20px 0;
   font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', sans-serif;
   color: #2c3e50;
@@ -27,8 +23,8 @@ h1 {
 .app-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* align content to top */
-  justify-content: flex-start; /* align content to left */
+  align-items: flex-start;
+  justify-content: flex-start;
   min-height: 0;
   width: 100%;
 }
@@ -36,7 +32,6 @@ h1 {
 .search-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
   width: 100%;
 }
 
@@ -47,13 +42,18 @@ h1 {
   justify-content: flex-start;
   align-items: flex-start;
   padding: 20px;
-  max-width: 1300px;
+  padding-top: 40px;
+  max-width: 1500px;
   margin: 0 auto;
   min-height: 0;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .meal-list {
   flex: 1;
-  max-width: 800px;
+  max-width: 600px;
+  margin-right: 640px;
+  box-sizing: border-box;
 }
+
