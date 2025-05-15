@@ -37,7 +37,7 @@ function App() {
       </div>
       <div className="main-layout">
         <MealList meals={meals} onSelectMeal={handleSelectMeal} />
-        <MealDetails meal={selectedMeal} />
+        <MealDetails meal={selectedMeal} /> {/* Moved back inside main-layout */}
       </div>
     </div>
   );

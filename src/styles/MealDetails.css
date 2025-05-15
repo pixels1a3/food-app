@@ -1,65 +1,88 @@
 .meal-details {
-  position: fixed;
-  right: 70px;
-  width: 500px;
-  height: 75vh;
-  max-width: 100%;
-  padding: 20px;
-  border: 1px solid #ccc;
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+  width: 100%;
+  max-width: 350px;
+  padding: 1.5rem;
+  border: 1px solid #e0e0e0;
   border-radius: 8px;
   background-color: #fff;
-  overflow-y: auto;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   box-sizing: border-box;
-  z-index: 500;
+  z-index: 1000;
 }
 
 .meal-details h2 {
-  margin-top: 0;
-  margin-bottom: 15px;
-  color: #333;
+  margin: 0 0 1rem;
+  color: #2c3e50;
+  font-size: 1.8rem;
 }
 
 .meal-details img {
   width: 100%;
-  max-width: 400px;
+  max-width: 300px;
   height: auto;
   border-radius: 8px;
-  margin-bottom: 20px;
+  margin: 0 auto 1.5rem;
   object-fit: cover;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  transition: opacity 0.3s ease-in;
+}
+
+.meal-details img[loading="lazy"] {
+  opacity: 0;
+}
+
+.meal-details img[loading="lazy"][src] {
+  opacity: 1;
 }
 
 .ingredients {
-  margin-bottom: 20px;
-  min-height: 100px;
+  margin-bottom: 1.5rem;
+}
+
+.ingredients h3 {
+  margin: 0 0 0.5rem;
+  color: #333;
 }
 
 .ingredients ul {
-  padding-left: 20px;
+  padding-left: 1.5rem;
   list-style-type: disc;
+  margin: 0;
+}
+
+.ingredients li {
+  margin-bottom: 0.5rem;
+  color: #555;
 }
 
 .instructions {
   white-space: pre-wrap;
-  line-height: 1.5;
+  line-height: 1.6;
   color: #555;
-  min-height: 100px;
+}
+
+.instructions h3 {
+  margin: 0 0 0.5rem;
+  color: #333;
 }
 
 
-@media (max-width: 1096px) {
+
+@media (max-width: 768px) {
   .meal-details {
     position: static;
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    margin: 20px auto;
-    margin-top: 20px;
+    max-width: 100%;
+    margin: 1rem 0;
   }
+
+  .meal-details h2 {
+    font-size: 1.5rem;
+  }
+
   .meal-details img {
-    max-width: 400px;
+    max-width: 300px;
   }
 }
