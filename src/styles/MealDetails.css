@@ -1,7 +1,7 @@
 .meal-details {
   position: fixed;
   right: 20px;
-  top: var(--search-bar-height, 80px);
+  top: calc(var(--header-height, 80px) + var(--search-bar-height, 60px));
   width: 600px;
   height: 80vh;
   max-width: 100%;
@@ -34,8 +34,8 @@
 }
 
 .ingredients {
-  margin-bottom: 30px;
-  min-height: 200px;
+  margin-bottom: 20px;
+  min-height: 100px;
 }
 
 .ingredients ul {

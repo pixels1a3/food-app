@@ -1,8 +1,16 @@
 .meal-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
   gap: 15px;
   max-width: 100%;
+  justify-items: start;
+  align-items: start;
+  place-content: start;
+  min-height: 0;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  align-self: start;
 }
 
 .meal-item {
@@ -15,7 +23,6 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  border: none;
   width: 100%;
 }
 

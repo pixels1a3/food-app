@@ -7,7 +7,8 @@ const MealList = ({ meals, onSelectMeal }) => {
   }
 
   return (
-    <div className="meal-list">
+    <div 
+    className="meal-list">
       {meals.map((meal) => (
         <div
           key={meal.idMeal}
