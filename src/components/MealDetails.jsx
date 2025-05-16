@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/MealDetails.css';
 
-const MealDetails = ({ meal, meals }) => { 
+const MealDetails = ({ meal }) => { 
     if (!meal) {
       return null;
     }

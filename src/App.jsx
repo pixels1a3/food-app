@@ -3,9 +3,6 @@ import SearchBar from './components/SearchBar';
 import MealList from './components/MealList';
 import MealDetails from './components/MealDetails';
 import './styles/App.css';
-import './styles/SearchBar.css';
-import './styles/MealList.css';
-import './styles/MealDetails.css';
 
 function App() {
   const [meals, setMeals] = useState([]);
